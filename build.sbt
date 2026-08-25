@@ -72,7 +72,7 @@ def mainDependencies(scalaVersion: String) = {
     "com.typesafe.slick" %% "slick-future" % "4.0.0-RC1",
     "org.typelevel" %% "cats-effect" % "3.6.1",
     "co.fs2" %% "fs2-core" % "3.12.0",
-    "org.postgresql" % "postgresql" % "42.7.12",
+    "org.postgresql" % "postgresql" % "42.7.13",
     "org.scala-lang.modules" %% "scala-collection-compat" % "2.14.0",
     "org.slf4j" % "slf4j-simple" % "2.0.18" % "provided",
     "org.scalatest" %% "scalatest" % "3.2.20" % "test",
@@ -106,7 +106,7 @@ lazy val slickPgJoda = (project in file("./addons/joda-time"))
     name := "slick-pg_joda-time",
     description := "Slick extensions for PostgreSQL - joda time module",
     libraryDependencies := mainDependencies(scalaVersion.value) ++ Seq(
-      "joda-time" % "joda-time" % "2.14.2"
+      "joda-time" % "joda-time" % "2.14.3"
     )
   )
   .dependsOn (slickPgCore % "test->test;compile->compile")
